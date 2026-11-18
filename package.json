@@ -9,6 +9,7 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@base-ui/react": "^1.9.0",
     "fumadocs-core": "^16.7.10",
     "fumadocs-mdx": "^14.2.11",
     "fumadocs-ui": "^16.7.10",

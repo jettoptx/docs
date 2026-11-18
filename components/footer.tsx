@@ -10,8 +10,8 @@ import {
 import {
   HOUSE,
   HOUSE_BUILT_ON,
+  HOUSE_FOOTER_NAV,
   HOUSE_LEGAL,
-  HOUSE_NAV,
   HOUSE_SOCIALS,
 } from "@/lib/house-links";
 
@@ -66,7 +66,7 @@ export function SiteFooter() {
           <div className="lg:col-span-3">
             <h4 className={titleClass}>Navigate</h4>
             <nav className="flex flex-col">
-              {HOUSE_NAV.map((item) => (
+              {HOUSE_FOOTER_NAV.map((item) => (
                 <a
                   key={item.num}
                   href={item.href}
@@ -104,11 +104,12 @@ export function SiteFooter() {
             <h4 className={`${titleClass} mt-8`}>Socials</h4>
             <ul className="flex flex-col gap-1">
               {HOUSE_SOCIALS.map((item) => (
-                <li key={item.name}>
+                <li key={item.key}>
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={item.label}
                     className="group/built inline-flex items-center gap-2.5 py-1 text-sm uppercase tracking-widest text-fd-muted-foreground hover:text-fd-foreground"
                   >
                     <span className="h-1.5 w-1.5 bg-orange-500" />

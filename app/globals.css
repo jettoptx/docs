@@ -9,12 +9,23 @@
   --fd-background: oklch(0.145 0 0);
   --color-orange-500: rgb(255, 105, 0);
   --accent: rgb(181, 82, 0);
+  /* Agency dark site-map tokens. Light overrides live on :root:not(.dark). */
+  --brand-ink: #0a0a0a;
+  --brand-surface: #14110e;
+  --brand-orange: #b55200;
+  --brand-cream: #f5e6c8;
+  --brand-border: color-mix(in oklab, #f5e6c8 14%, transparent);
   font-size: 106%;
 }
 
 /* Override fumadocs defaults for OPTX brand */
 :root.dark,
 .dark {
+  --brand-ink: #0a0a0a;
+  --brand-surface: #14110e;
+  --brand-orange: #b55200;
+  --brand-cream: #f5e6c8;
+  --brand-border: color-mix(in oklab, #f5e6c8 14%, transparent);
   --fd-background: oklch(0.1 0 0);
   --fd-foreground: oklch(0.985 0 0);
   --fd-muted-foreground: oklch(0.65 0 0);
@@ -27,6 +38,11 @@
 }
 
 :root:not(.dark) {
+  --brand-ink: #ffffff;
+  --brand-surface: #ffffff;
+  --brand-orange: #dc4e1f;
+  --brand-cream: #111111;
+  --brand-border: #e5e5e5;
   --fd-background: oklch(0.98 0 0);
   --fd-foreground: oklch(0.08 0 0);
   --fd-muted-foreground: oklch(0.25 0 0);

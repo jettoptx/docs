@@ -72,7 +72,7 @@ export default function ResearchLabsPage() {
                   { label: "GitHub", href: "https://github.com/JEOresearch" },
                   { label: "Lab Homepage", href: "https://jeoresearch.com/ccslab" },
                   { label: "Google Scholar", href: "https://scholar.google.com/citations?hl=en&user=QLSRDi8AAAAJ" },
-                  { label: "Discord", href: "https://discord.gg/tqUzmrcJTy" },
+                  { label: "Discord", href: "https://discord.gg/jtx" },
                 ].map((link) => (
                   <a
                     key={link.label}
