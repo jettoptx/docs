@@ -12,7 +12,6 @@ import {
   HOUSE_BUILT_ON,
   HOUSE_FOOTER_NAV,
   HOUSE_LEGAL,
-  HOUSE_SOCIALS,
 } from "@/lib/house-links";
 
 const titleClass =
@@ -92,24 +91,6 @@ export function SiteFooter() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group/built inline-flex items-center gap-2.5 py-1 text-sm uppercase tracking-widest text-fd-muted-foreground hover:text-fd-foreground"
-                  >
-                    <span className="h-1.5 w-1.5 bg-orange-500" />
-                    {item.name}
-                    <ArrowRight size={12} className="text-orange-500 opacity-0 group-hover/built:opacity-100" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <h4 className={`${titleClass} mt-8`}>Socials</h4>
-            <ul className="flex flex-col gap-1">
-              {HOUSE_SOCIALS.map((item) => (
-                <li key={item.key}>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={item.label}
                     className="group/built inline-flex items-center gap-2.5 py-1 text-sm uppercase tracking-widest text-fd-muted-foreground hover:text-fd-foreground"
                   >
                     <span className="h-1.5 w-1.5 bg-orange-500" />
