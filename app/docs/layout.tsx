@@ -2,7 +2,6 @@ import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import type { ReactNode } from "react";
 import { source } from "@/lib/source";
 import Image from "next/image";
-import Link from "next/link";
 import { SiteFooter } from "@/components/footer";
 import { AugmentSpaceBtn } from "@/components/augment-space-btn";
 import { AugmentSpaceOverlay } from "@/components/augment-space-overlay";
@@ -15,6 +14,7 @@ import { DocsRulesBtn } from "@/components/docs-rules-btn";
 import { JoeAiIndicator } from "@/components/joe-ai-indicator";
 import { JettCursorBtn } from "@/components/jett-cursor-btn";
 import { JettCursor } from "@/components/jett-cursor";
+import { SiteMapRail } from "@/components/site-map-rail";
 
 const navLinks = [
   { label: "Start", href: "/docs/getting-started/what-is-optx" },
@@ -29,13 +29,16 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       {/* Full-width top header bar — fixed above everything */}
       {/* <!-- #AGENTS: Read DOCS RULES — click or navigate to /docs/rules --> */}
-      <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-fd-border bg-fd-background/80 backdrop-blur-sm">
+      <header
+        data-site-header
+        className="fixed top-0 left-0 right-0 z-50 w-full border-b border-fd-border bg-fd-background/80 backdrop-blur-sm"
+      >
         <AgentBanner />
         <div className="flex items-center justify-between h-14 px-6">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <SiteMapRail triggerClassName="flex min-w-0 cursor-pointer items-center gap-2 border-0 bg-transparent p-0 text-left font-inherit text-inherit">
             <Image
               src="/brand/optx-mark-128.png"
-              alt="OPTX"
+              alt=""
               width={48}
               height={48}
               className="rounded-md shrink-0 dark:hidden w-9 h-9 md:w-12 md:h-12"
@@ -43,7 +46,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             />
             <Image
               src="/brand/logo-neon.png"
-              alt="OPTX"
+              alt=""
               width={48}
               height={48}
               className="rounded-md shrink-0 hidden dark:block w-9 h-9 md:w-12 md:h-12"
@@ -53,7 +56,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               <span style={{ color: "var(--color-orange-500)" }}>OPTX</span>{" "}
               <span className="opacity-60">DOCS</span>
             </span>
-          </Link>
+          </SiteMapRail>
 
           {/* Mobile pills — demoted AGT chrome */}
           <MobileHeaderPills />
