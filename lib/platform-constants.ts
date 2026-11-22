@@ -17,15 +17,6 @@ export const POA_TRUST_DEVNET = "79nQsecDspUWxvAMyJvK36EUty4yEoP5ssLvHZuNiugF";
 export const DEPIN_PROGRAM_DEVNET = "91SqqYLMi5zNsfMab6rnvipwJhDpN4FEMSLgu8F3bbGq";
 
 export const GITHUB_REPOS = {
-  docs: "https://github.com/jettoptx/jettoptx-docs",
-  sdk: "https://github.com/jettoptx/jettoptx-sdk",
-  aaronRouter: "https://github.com/jettoptx/jettoptx-aaron-router",
-  aaronPublic: "https://github.com/jettoptx/jettoptx-aaron-public",
-  poaDepin: "https://github.com/jettoptx/jettoptx-poa-depin",
-  jettchatApp: "https://github.com/jettoptx/jettoptx-jettchat-app",
-  mojo: "https://github.com/jettoptx/jettoptx-mojo",
-  saas: "https://github.com/jettoptx/jettoptx-saas",
-  jtxTrade: "https://github.com/jettoptx/jettoptx-jtx-trade",
-  jettauth: "https://github.com/jettoptx/jettoptx-jettauth",
-  joeAgentApi: "https://github.com/jettoptx/joe-agent-api",
+  docs: "https://github.com/jettoptx/docs",
+  poa: "https://github.com/jettoptx/poa",
 } as const;

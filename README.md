@@ -1,26 +1,8 @@
-# Jett Optics flagship
+# docs
 
-GitHub org `jettoptx`. Origin team `jett-optx`. The runtime model is Grok.
+Public documentation for Jett Optics. The runtime model is Grok.
 
-| Repo | Role | Visibility |
-| --- | --- | --- |
-| [dojo](https://github.com/jettoptx/dojo) | Production Dojo backend. https://dojo.jettoptics.si | private |
-| [docs](https://github.com/jettoptx/docs) | Public documentation | public |
-| [space](https://github.com/jettoptx/space) | Space trade app | private |
-| [poa](https://github.com/jettoptx/poa) | On-chain open source. Proof of Agency and DePIN | public |
-| [mojo](https://github.com/jettoptx/mojo) | MOJO native app | private |
-| [core](https://github.com/jettoptx/core) | Agent orchestration. Live branch is `master` | private |
-| [aegis](https://github.com/jettoptx/aegis) | AEGIS crypto and neuromorphic IP | private |
-| [aegis-patent](https://github.com/jettoptx/aegis-patent) | AEGIS patent sandbox | private |
-| [agency](https://github.com/jettoptx/agency) | Agency site | private |
-
-Retired history is the archive bucket. It is not a tenth product.
-
-DVOID (`dvoid.io`) is the DevSecOps control plane under these repos. Alyne Solutions operates it. Jett Optics is the protocol partner for gaze-based encryption and Solana DePIN. The A2A agent gateway is the agent door on that plane.
-
-Hedgehog premier MCP in JetChat: https://hedgehog-premier-mcp-in-jetchat-4nid.pages.cursorusercontent.com/
-
-**This repo.** Imported from `jettoptx-docs` with history. This is the public documentation flagship.
+Imported from `jettoptx-docs` with history. Live at [docs.jettoptics.si/docs](https://docs.jettoptics.si/docs).
 
 ---
 
