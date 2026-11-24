@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Research Labs",
   description: "Academic and open-source research partners advancing gaze tracking, AR, and spatial computing.",
+  alternates: { canonical: "https://docs.jettoptics.si/research-labs" },
 };
 
 export default function ResearchLabsPage() {

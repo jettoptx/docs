@@ -47,8 +47,23 @@ export async function generateMetadata(props: {
     const page = source.getPage(params.slug);
     if (!page) notFound();
   
+    const slug = params.slug?.filter(Boolean).join("/") ?? ""
+    const canonical = slug
+      ? `https://docs.jettoptics.si/docs/${slug}`
+      : "https://docs.jettoptics.si/docs"
     return {
           title: page.data.title,
           description: page.data.description,
+          alternates: { canonical },
+          openGraph: {
+            title: page.data.title,
+            description: page.data.description,
+            url: canonical,
+          },
+          twitter: {
+            card: "summary",
+            title: page.data.title,
+            description: page.data.description,
+          },
     };
 }

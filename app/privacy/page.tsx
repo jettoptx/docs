@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "OPTX privacy policy — data handling, security practices, and compliance.",
+  alternates: { canonical: "https://docs.jettoptics.si/privacy" },
 };
 
 export default function PrivacyPage() {
