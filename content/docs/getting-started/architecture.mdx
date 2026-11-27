@@ -31,8 +31,10 @@ JettChat supports two modes. Both share the AGT gaze pipeline, JTX gating, and S
 │  EDGE COMPUTE                                           │
 │  ├── AARON Router — gaze verification + JTX gating     │
 │  ├── JOE Agent — multi-tool orchestration              │
-│  ├── HEDGEHOG — MCP gateway                            │
-│  └── SpacetimeDB — real-time edge database             │
+│  └── HEDGEHOG — MCP gateway                            │
+├─────────────────────────────────────────────────────────┤
+│  SPACETIMEDB                                            │
+│  └── Runs on Railway at https://stdb.jettoptics.si     │
 ├─────────────────────────────────────────────────────────┤
 │  ON-CHAIN (Solana)                                      │
 │  ├── PoA DePIN Program (Anchor — jettoptx-poa-depin)   │
@@ -49,7 +51,7 @@ JettChat supports two modes. Both share the AGT gaze pipeline, JTX gating, and S
         v
   +-----------+     +-----------+     +-------------+
   |  Frontend |---->|   AARON   |---->| SpacetimeDB |
-  | (Next.js) |     |  Router   |     |  (Edge DB)  |
+  | (Next.js) |     |  Router   |     |  (Railway)  |
   +-----------+     +-----+-----+     +------+------+
                           |                   |
                     validates            stores gaze
@@ -84,14 +86,12 @@ JettChat supports two modes. Both share the AGT gaze pipeline, JTX gating, and S
 
 > Full table: [On-Chain Addresses](/docs/getting-started/on-chain-addresses)
 
-## Edge Hardware
-
-All private compute runs on **OPTX Validator Nodes** distributed across the network:
+## Edge services
 
 - **AARON Router** — FastAPI gaze session manager + Solana bridge. Serves both JettChat modes.
-- **JOE Agent** — Dual-instance: edge-node primary (runs AARON + HEDGEHOG + SpacetimeDB) + containerized secondary for redundancy. See [AstroJOE](/docs/astrojoe) for runtime details.
-- **HEDGEHOG** — MCP gateway routing AI queries through Grok, storing gaze data in SpacetimeDB.
-- **SpacetimeDB** — Real-time database with reducers + subscriptions on the edge node.
+- **JOE Agent** — Dual-instance: edge-node primary (runs AARON + HEDGEHOG) + containerized secondary for redundancy. See [AstroJOE](/docs/astrojoe) for runtime details.
+- **HEDGEHOG** — MCP gateway routing AI queries through Grok, storing gaze data in SpacetimeDB. SpacetimeDB runs on Railway at https://stdb.jettoptics.si.
+- **SpacetimeDB** — Real-time database with reducers and subscriptions. Runs on Railway at https://stdb.jettoptics.si.
 - **Federation transport** — optional Matrix-compatible transport for AstroJOE inter-agent communication. Not part of JettChat dual-mode auth or messaging core.
 
 Raw biometric data never leaves the validator node. Only 32-byte opaque proofs reach the blockchain.

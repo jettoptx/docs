@@ -96,7 +96,7 @@ export default function ResearchLabsPage() {
               <p>
                 JEO Research&apos;s work on real-time gaze extraction, AR overlay systems, and computer
                 vision pipelines directly informs the OPTX gaze biometric stack &mdash; from MediaPipe
-                iris tracking in the browser to on-device inference on NVIDIA Jetson edge devices and other agentic GPUs.
+                iris tracking in the browser to on-device inference on agentic GPUs.
               </p>
             </div>
           </div>

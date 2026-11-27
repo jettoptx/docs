@@ -4,7 +4,7 @@ title: Memory System
 description: SpacetimeDB-backed persistent memory with categories, importance scoring, and real-time subscriptions.
 ---
 
-AstroJOE's memory is backed by **SpacetimeDB** running on OPTX Validator Nodes. The `optx-cortex` database provides real-time reducers and subscriptions for persistent agent state.
+AstroJOE's memory is backed by **SpacetimeDB**, which runs on Railway at https://stdb.jettoptics.si. The `optx-cortex` database provides real-time reducers and subscriptions for persistent agent state.
 
 ## Database: optx-cortex
 
@@ -57,10 +57,10 @@ The JOE Agent API supports pluggable memory backends:
 | Backend | Description | Default |
 |---------|-------------|---------|
 | **holographic** | SQLite + FTS5 full-text search (local) | Yes |
-| **spacetimedb** | SpacetimeDB on validator node — uses HTTP SQL + reducer calls | Production |
+| **spacetimedb** | SpacetimeDB runs on Railway at https://stdb.jettoptics.si — HTTP SQL + reducer calls | Production |
 | **sqlite** | Standalone SQLite (same as holographic, different config) | — |
 
-The SpacetimeDB backend (added in v0.3.0) connects directly to the `optx-cortex` database on Jetson, using the same `store_memory` and `delete_memory` reducers as the agent itself. Client-side filtering handles SpacetimeDB's SQL limitations (no LIKE, no ORDER BY).
+The SpacetimeDB backend (added in v0.3.0) connects directly to the `optx-cortex` database. SpacetimeDB runs on Railway at https://stdb.jettoptics.si, using the same `store_memory` and `delete_memory` reducers as the agent itself. Client-side filtering handles SpacetimeDB's SQL limitations (no LIKE, no ORDER BY).
 
 ## SpacetimeDB Limitations
 

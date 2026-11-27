@@ -16,7 +16,7 @@ OPTX is **Solana-native**. Gaze proofs verified by the AARON router are bridged 
 |-------|-----------|-------------|
 | **Capture** | Client (MOJO / Web) | On-device iris tracking → AGT classification |
 | **Verify** | AARON Router | `POST /session` + `POST /verify` → opaque proof hash |
-| **Record** | SpacetimeDB | Session state + attestation events at `stdb.jettoptics.ai` |
+| **Record** | SpacetimeDB | Session state and attestation events. Runs on Railway at https://stdb.jettoptics.si |
 | **Anchor** | PoA DePIN | On-chain AGT attestation PDA on Solana mainnet |
 | **Reward** | DePIN | PoA trust score + $OPTX / x402 micropayments |
 
