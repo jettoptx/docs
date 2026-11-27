@@ -1,7 +1,7 @@
 ---
 icon: Server
 title: Infrastructure Topology
-description: Full network map of all OPTX services across validator nodes, orchestration clusters, and cloud deployments.
+description: Network map of OPTX services. SpacetimeDB runs on Railway at https://stdb.jettoptics.si.
 ---
 
 import { D2Diagram } from "@/components/d2-diagram";
@@ -14,15 +14,17 @@ import { D2Diagram } from "@/components/d2-diagram";
 |-------|------------|
 | <span style={{color: "#60a5fa"}}>**Devices**</span> | Desktop / Workstation, Mobile, Seekers |
 | <span style={{color: "#eab308"}}>**Tailscale**</span> | WireGuard encrypted mesh tunnels |
-| <span style={{color: "#f43f5e"}}>**Edge Node**</span> | K3s, SpacetimeDB, HEDGEHOG, AARON, optional federation transport |
+| <span style={{color: "#f43f5e"}}>**Edge Node**</span> | K3s, HEDGEHOG, AARON, optional federation transport |
 | <span style={{color: "#60a5fa"}}>**Orchestration**</span> | AstroJOE (agent runtime in Docker — dual-instance: edge-node primary + containerized secondary), Workspace UI, AgenC Coordinator |
-| <span style={{color: "#eab308"}}>**Cloud**</span> | Vercel, Convex, Solana, xAI Grok |
+| <span style={{color: "#eab308"}}>**Cloud**</span> | Vercel, Convex, Solana, xAI Grok. SpacetimeDB runs on Railway at https://stdb.jettoptics.si |
 
 ## Edge Node — Validator Services
 
+SpacetimeDB runs on Railway at https://stdb.jettoptics.si.
+
 | Service | Role |
 |---------|------|
-| **SpacetimeDB** | Primary edge database (reducers + subscriptions) |
+| **SpacetimeDB** | Runs on Railway at https://stdb.jettoptics.si |
 | **HEDGEHOG** | AI gateway — OpenAI-compatible REST API for agents, MCP stdio for IDEs |
 | **AARON Router** | Gaze verification + tensor classification |
 | **Federation transport** | Optional Matrix-compatible inter-agent communication |
